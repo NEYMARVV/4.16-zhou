@@ -1,0 +1,149 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: .14rem;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "微软雅黑";
+  text-size-adjust: 100%; }
+
+ul, li {
+  list-style: none; }
+
+html {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 625%; }
+
+img, div, body, html, ul, li, a {
+  -webkit-touch-callout: none; }
+
+input, button {
+  outline: 0; }
+
+button {
+  cursor: pointer; }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #999; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.header {
+  width: 100%;
+  height: .46rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 .1rem;
+  background: #C4493C; }
+
+.i-box1, .i-box2 {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.i-box1 > i, .i-box2 > i {
+  font-size: .2rem;
+  color: #fff; }
+
+.header > input {
+  width: 70%;
+  height: 60%;
+  border-radius: 20px;
+  border: 0;
+  text-align: center; }
+
+.headtwo {
+  width: 100%;
+  height: .45rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 .3rem; }
+
+.tit {
+  height: 100%;
+  width: 20%;
+  line-height: .45rem;
+  text-align: center;
+  border-bottom: 1px solid #fff; }
+
+.tit:hover {
+  color: #C4493C;
+  border-bottom: 1px solid #C4493C; }
+
+.section {
+  width: 100%;
+  flex: 1;
+  overflow-y: scroll; }
+
+.ban, .hua, .kuai, .kuai > img {
+  width: 100%;
+  height: auto; }
+
+.icon-header {
+  width: 100%;
+  height: .8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 .2rem;
+  border-bottom: 1px solid #eee; }
+
+.icon-box {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.icon-box > i {
+  font-size: .3rem;
+  color: #C4493C; }
+
+.icon-box > span {
+  font-size: 12px;
+  color: #C4493C; }
+
+.tuijian {
+  width: 100%;
+  height: .4rem;
+  line-height: .4rem;
+  padding-left: .2rem; }
+
+.img-tit {
+  width: 100%;
+  height: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.img-box {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.img-box > img {
+  width: 100%;
+  height: 1rem; }
+
+/*# sourceMappingURL=style.css.map */

@@ -66,6 +66,23 @@
                     <span>排行榜</span>
                 </div>
             </div>
+            <div class="tuijian">
+                <p class="tit-p">推荐歌单<i class="icon iconfont">&#xe6d6;</i></p>
+            </div>
+            <div class="img-tit">
+                <div class="img-box">
+                    <img src="img/1.png" alt="">
+                    <p class="img-p">最近很火的歌曲</p>
+                </div>
+                <div class="img-box">
+                    <img src="img/1.png" alt="">
+                    <p class="img-p">最近很火的歌曲</p>
+                </div>
+                <div class="img-box">
+                    <img src="img/1.png" alt="">
+                    <p class="img-p">最近很火的歌曲</p>
+                </div>
+            </div>
         </section>
     </div>
     <script src="js/jquery.min.js"></script>
@@ -80,7 +97,16 @@
         $.ajax({
             url:'login',
             success:function(res){
-                console.log(res)
+                console.log(res);
+                var str = "";
+
+                $.each(res,function(i,v){
+                    str += `<div class="img-box">
+                                <img src="${v.img}" alt="">
+                                <p class="img-p">${v.p}</p>
+                            </div>`
+                })
+                $('.img-tit').html(str);
             }
         })
     </script>

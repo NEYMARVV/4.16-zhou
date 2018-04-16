@@ -5,6 +5,8 @@ var minhtml = require('gulp-htmlmin');
 var minjs = require('gulp-uglify');
 var sequence = require('gulp-sequence');
 var server = require('gulp-webserver');
+var url = require('url')
+var data = require('./json/js.json')
 
 gulp.task('sass',function(){
     gulp.src('css/style.scss')
@@ -44,6 +46,11 @@ gulp.task('icon',function(){
     .pipe(gulp.dest('dist/font'))
     })
 
+gulp.task('json',function(){
+    gulp.src('json/js.json')
+    .pipe(gulp.dest('dist/json'))
+    })
+
 var options = {
     removeComments: true,
     collapseWhitespace: true,
@@ -63,9 +70,9 @@ gulp.task('server',function(){
         open:true,
         livereload:true,
         middleware:function(req,res,next){
-            if(/\/login/g.test(req)){
+            if(/\/login/g.test(req.url)){
                 res.setHeader('Content-Type','test/json;charset=UTF-8')
-                res.end()
+                res.end(JSON.stringify(data))
             }
             next()
         }
@@ -73,6 +80,6 @@ gulp.task('server',function(){
 })
 
 gulp.task('default',function(callback){
-    sequence('minhtml',['sass','minjs','jq','swijs','swicss','img','icon'],'server',callback)
+    sequence('minhtml',['sass','minjs','jq','swijs','swicss','img','icon','json'],'server',callback)
 })
 

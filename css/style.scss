@@ -120,3 +120,30 @@ html,body{width:100%;
     font-size:12px;
     color:#C4493C;
 }
+
+.tuijian{
+    width:100%;
+    height:.4rem;
+    line-height:.4rem;
+    padding-left:.2rem;
+}
+
+.img-tit{
+    width:100%;
+    height:1.6rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.img-box{
+    width:33%;
+    height:100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+}
+.img-box>img{
+    width:100%;
+    height:1rem;
+}
