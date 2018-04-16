@@ -12,10 +12,77 @@
     <link rel="stylesheet" type="text/css" href="font/iconfont.css">
 </head>
 <body>
+    <div class="wrap">
+        <header id="header" class="header">
+            <div class="i-box1">
+                <i class="icon iconfont">&#xe6f4;</i>
+            </div>
+            <input type="text" name="" value="" placeholder="给你推荐">
+            <div class="i-box2">
+                <i class="icon iconfont">&#xe6f9;</i>
+            </div>
+        </header><!-- /header -->
+        <div class="headtwo">
+            <div class="tit">
+                音乐
+            </div>
+            <div class="tit">
+                视频
+            </div>
+            <div class="tit">
+                电台
+            </div>
+        </div>
+        <section class="section">
+            <div class="ban swiper-container">
+                <div class="hua swiper-wrapper">
+                    <div class="kuai swiper-slide">
+                        <img src="img/0.jpg" alt="">
+                    </div>
+                    <div class="kuai swiper-slide">
+                        <img src="img/0.jpg" alt="">
+                    </div>
+                    <div class="kuai swiper-slide">
+                        <img src="img/0.jpg" alt="">
+                    </div>
+                </div>
+                <div class="dian swiper-pagination"></div>
+            </div>
+            <div class="icon-header">
+                <div class="icon-box">
+                    <i class="icon iconfont">&#xe6a1;</i>
+                    <span>私人FM</span>
+                </div>
+                <div class="icon-box">
+                    <i class="icon iconfont">&#xe6a8;</i>
+                    <span>每日推荐</span>
+                </div>
+                <div class="icon-box">
+                    <i class="icon iconfont">&#xe6ab;</i>
+                    <span>歌单</span>
+                </div>
+                <div class="icon-box">
+                    <i class="icon iconfont">&#xe64a;</i>
+                    <span>排行榜</span>
+                </div>
+            </div>
+        </section>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper-3.4.2.min.js"></script>
     <script>
+        new Swiper('.ban',{
+            pagination:".dian",
+            autoplay:3000,
+            loop:true
+        })
 
+        $.ajax({
+            url:'login',
+            success:function(res){
+                console.log(res)
+            }
+        })
     </script>
 </body>
 </html>
